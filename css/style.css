@@ -1,0 +1,278 @@
+/* ==========================================================
+   わたしの代理店 募集LP(OHAKO LPと同一トンマナ)
+   カラー: 炭黒×木×金 / CTA=ゴールド
+   ========================================================== */
+:root {
+  --ink: #241f18;
+  --ink-weak: #6d6458;
+  --dark: #16130e;
+  --dark-2: #201b14;
+  --cream: #f6f1e8;
+  --white: #ffffff;
+  --paper: #fbf9f5;
+  --gold: #c19a5b;
+  --gold-deep: #a87f3f;
+  --gold-btn: #d1a75e;
+  --red: #c2402f;
+  --serif: "Noto Serif JP", serif;
+  --sans: "Noto Sans JP", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.95;
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+ul, ol { list-style: none; }
+
+.container { max-width: 640px; margin: 0 auto; padding: 0 22px; }
+.pc { display: none; }
+.sp { display: inline; }
+
+/* ---------- セクション共通 ---------- */
+.sec { padding: 76px 0; background: var(--white); }
+.sec--cream { background: var(--cream); }
+.sec--dark { background: var(--dark); color: #f1ece3; }
+
+.sec__eyebrow { font-size: 12px; letter-spacing: 0.28em; color: var(--gold-deep); margin-bottom: 14px; font-weight: 700; }
+.sec__eyebrow--gold { color: var(--gold); }
+.sec__title { font-family: var(--serif); font-size: 28px; font-weight: 600; line-height: 1.55; letter-spacing: 0.03em; margin-bottom: 22px; }
+.sec--dark .sec__title { color: #f6f0e5; }
+.sec__body { margin-bottom: 30px; font-size: 17px; }
+.sec--dark .sec__body { color: #ddd6c9; }
+
+/* ---------- CTA ---------- */
+.cta { text-align: center; margin-top: 36px; }
+.btn-gold {
+  display: block;
+  max-width: 440px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #d8b06a, #b8894a);
+  color: #1c170f;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16.5px;
+  letter-spacing: 0.04em;
+  padding: 19px 44px 19px 24px;
+  border-radius: 999px;
+  position: relative;
+  box-shadow: 0 10px 26px rgba(184, 137, 74, 0.4);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.btn-gold::after {
+  content: "";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-top: 2.5px solid #1c170f;
+  border-right: 2.5px solid #1c170f;
+  transform: translateY(-50%) rotate(45deg);
+}
+.btn-gold:hover { filter: brightness(1.06); transform: translateY(-2px); }
+.btn-gold--lg { font-size: 19px; padding: 21px 22px; }
+.cta__note { font-size: 13.5px; color: var(--ink-weak); margin-top: 12px; letter-spacing: 0.04em; }
+.cta__note--light { color: #beb6a7; }
+
+/* ---------- reveal ---------- */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- FV ---------- */
+.fv { position: relative; min-height: 94svh; display: flex; align-items: flex-end; color: #fff; }
+.fv__bg { position: absolute; inset: 0; overflow: hidden; }
+.fv__img { width: 100%; height: 100%; object-fit: cover; }
+.fv__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,10,7,0.35) 0%, rgba(12,10,7,0.55) 45%, rgba(12,10,7,0.92) 100%); }
+.fv__inner { position: relative; z-index: 1; width: 100%; max-width: 640px; margin: 0 auto; padding: 96px 22px 44px; }
+.fv__area { font-size: 12px; letter-spacing: 0.2em; color: var(--gold); border: 1px solid rgba(193,154,91,0.6); display: inline-block; padding: 7px 14px; margin-bottom: 22px; }
+.fv__catch { font-family: var(--serif); font-size: 34px; font-weight: 600; line-height: 1.5; letter-spacing: 0.02em; margin-bottom: 16px; text-shadow: 0 2px 24px rgba(0,0,0,0.5); }
+.fv__catch em { font-style: normal; color: var(--gold); }
+.fv__lead { font-size: 16.5px; font-weight: 500; line-height: 1.9; margin-bottom: 22px; color: #f2ede3; }
+.fv__zeros { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.fv__zeros span {
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(10,8,5,0.55);
+  backdrop-filter: blur(4px);
+  padding: 8px 14px;
+  font-size: 13.5px;
+  letter-spacing: 0.04em;
+}
+.fv__zeros em { font-style: normal; font-family: var(--serif); color: var(--gold); font-size: 1.5em; font-weight: 700; }
+.fv .cta__note { color: #d8d1c4; }
+
+/* ---------- Sec.2 問題 ---------- */
+.problem { background: var(--dark) url("../img/texture-dark.jpg") center / cover no-repeat; background-blend-mode: soft-light; }
+.problem .sec__title { text-align: center; }
+.problem .sec__eyebrow { text-align: center; }
+.problem__list { display: grid; gap: 14px; margin: 34px 0; }
+.problem__list li { border: 1px solid #3a3125; background: rgba(32,27,20,0.85); padding: 20px 22px; }
+.problem__list h3 { font-family: var(--serif); font-size: 18px; color: #f0e9dc; margin-bottom: 4px; }
+.problem__list p { font-size: 14px; color: #b9b09e; }
+.problem__closing { text-align: center; font-family: var(--serif); font-size: 17px; line-height: 2; color: #e8e1d2; }
+
+/* ---------- Sec.3 答え ---------- */
+.answer .sec__eyebrow, .answer .sec__title, .answer .sec__body { text-align: center; }
+.zeros { display: grid; gap: 16px; margin-top: 36px; }
+.zeros__card { border: 1px solid #e8e0d2; background: var(--paper); text-align: center; padding: 30px 20px; }
+.zeros__card em { font-style: normal; font-family: var(--serif); font-size: 44px; font-weight: 700; color: var(--gold-deep); line-height: 1.2; display: block; }
+.zeros__card--fill { background: var(--dark); border-color: var(--dark); color: #f1ece3; }
+.zeros__card--fill em { color: var(--gold); }
+.zeros__card h3 { font-size: 17px; font-weight: 700; margin: 6px 0 4px; }
+.zeros__card p { font-size: 13.5px; color: var(--ink-weak); }
+.zeros__card--fill p { color: #b9b09e; }
+
+/* ---------- Sec.4 What is ---------- */
+.steps { display: grid; gap: 14px; margin: 34px 0; }
+.steps li { background: var(--white); border: 1px solid #e8e0d2; padding: 22px; display: grid; grid-template-columns: 52px 1fr; grid-template-rows: auto auto; column-gap: 16px; align-items: center; }
+.steps__num { grid-row: 1 / 3; width: 52px; height: 52px; border-radius: 50%; background: var(--dark); color: var(--gold); font-family: var(--serif); font-size: 22px; display: flex; align-items: center; justify-content: center; }
+.steps h3 { font-family: var(--serif); font-size: 18px; font-weight: 600; }
+.steps p { grid-column: 2; font-size: 13.5px; color: #5b5346; }
+.roles { display: grid; gap: 14px; }
+.roles__card { border: 1.5px solid var(--gold-deep); background: var(--white); padding: 22px; }
+.roles__card h3 { font-size: 13px; letter-spacing: 0.14em; color: var(--gold-deep); margin-bottom: 8px; font-weight: 700; }
+.roles__main { font-family: var(--serif); font-size: 19px; font-weight: 600; line-height: 1.6; }
+.roles__note { font-size: 13px; color: var(--ink-weak); margin-top: 6px; }
+.roles__card--hq { background: var(--dark); border-color: var(--dark); color: #f1ece3; }
+.roles__card--hq h3 { color: var(--gold); }
+.roles__card--hq .roles__note { color: #b9b09e; }
+
+/* ---------- Sec.5 商品力 ---------- */
+.product .sec__eyebrow, .product .sec__title, .product .sec__body { text-align: center; }
+.product .container { max-width: 960px; }
+.product__gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 36px 0; }
+.product__gallery figure { position: relative; }
+.product__gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.product__gallery figcaption { position: absolute; left: 0; bottom: 0; font-size: 11.5px; letter-spacing: 0.08em; background: rgba(12,10,6,0.75); color: #ece3d2; padding: 5px 12px; }
+.product__points { max-width: 640px; margin: 0 auto; }
+.product__points li { border-bottom: 1px dashed #3a3125; padding: 13px 0 13px 30px; position: relative; font-size: 15.5px; color: #e6dfd0; }
+.product__points li::before { content: ""; position: absolute; left: 4px; top: 1.35em; width: 13px; height: 7px; border-left: 2.5px solid var(--gold); border-bottom: 2.5px solid var(--gold); transform: rotate(-45deg); }
+.product__points strong { color: #fff; }
+
+/* ---------- Sec.6 収益 ---------- */
+.money .sec__eyebrow, .money .sec__title { text-align: center; }
+.money__list { display: grid; gap: 12px; margin: 32px 0 18px; }
+.money__list li { border: 1px solid #e8e0d2; background: var(--paper); padding: 16px 18px; font-size: 15px; line-height: 1.85; }
+.money__list span { display: inline-block; font-size: 12px; letter-spacing: 0.1em; font-weight: 700; color: #fff; background: var(--gold-deep); padding: 2px 10px; margin-right: 10px; vertical-align: 2px; }
+.money__zero { text-align: center; font-family: var(--serif); font-size: 16.5px; margin-bottom: 34px; }
+.money__model { background: var(--dark); color: #f1ece3; padding: 28px 22px; }
+.money__model h3 { font-family: var(--serif); font-size: 18px; color: var(--gold); text-align: center; margin-bottom: 18px; }
+.money__table { width: 100%; border-collapse: collapse; background: var(--white); color: var(--ink); font-size: 14.5px; }
+.money__table td { padding: 13px 14px; border-bottom: 1px solid #eee5d6; }
+.money__table td:last-child { text-align: right; white-space: nowrap; font-weight: 500; }
+.money__table .minus { color: var(--red); }
+.money__table tfoot td { border-bottom: none; background: var(--gold-deep); color: #fff; font-family: var(--serif); font-size: 16px; }
+.money__table tfoot em { font-style: normal; font-size: 1.35em; font-weight: 700; }
+.money__note { font-size: 12px; color: #b0a795; margin-top: 14px; line-height: 1.9; }
+
+/* ---------- Sec.7 ロジック ---------- */
+.logic .sec__eyebrow, .logic .sec__title { text-align: center; }
+.logic__steps { display: grid; gap: 12px; margin: 32px 0 22px; }
+.logic__steps li { background: var(--white); border: 1px solid #e8e0d2; padding: 16px 18px 16px 58px; position: relative; font-size: 15px; line-height: 1.85; }
+.logic__steps span { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; background: var(--dark); color: var(--gold); font-family: var(--serif); font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.logic__steps strong { color: var(--red); font-size: 1.1em; }
+.logic__closing { text-align: center; font-family: var(--serif); font-size: 16.5px; margin-bottom: 12px; }
+.logic__closing strong { color: var(--gold-deep); }
+.logic__note { font-size: 12px; color: var(--ink-weak); line-height: 1.9; text-align: center; }
+
+/* ---------- Sec.8 契約条件 ---------- */
+.terms__list { display: grid; gap: 16px; margin-top: 34px; }
+.terms__list li { border-left: 3px solid var(--gold); background: var(--paper); padding: 18px 20px; }
+.terms__list h3 { font-family: var(--serif); font-size: 17.5px; font-weight: 600; margin-bottom: 4px; }
+.terms__list p { font-size: 14px; color: #4c443a; line-height: 1.9; }
+
+/* ---------- Sec.9 希少性 ---------- */
+.scarcity .sec__eyebrow, .scarcity .sec__title, .scarcity .sec__body { text-align: center; }
+.scarcity__box { border: 1px solid var(--gold); background: var(--dark-2); text-align: center; padding: 24px 20px; max-width: 560px; margin: 0 auto; }
+.scarcity__box h3 { font-family: var(--serif); font-size: 17px; color: var(--gold); margin-bottom: 8px; }
+.scarcity__box p { font-size: 14.5px; color: #e6dfd0; line-height: 2; }
+.scarcity__note { font-size: 12.5px; color: #b0a795; margin-top: 6px; }
+
+/* ---------- Sec.10 実績 ---------- */
+.support .sec__eyebrow, .support .sec__title, .support .sec__body { text-align: center; }
+.support__list { max-width: 560px; margin: 0 auto 26px; }
+.support__list li { border-bottom: 1px solid #ece5d8; padding: 13px 0 13px 30px; position: relative; font-size: 15.5px; }
+.support__list li::before { content: ""; position: absolute; left: 4px; top: 1.4em; width: 13px; height: 7px; border-left: 2.5px solid var(--gold-deep); border-bottom: 2.5px solid var(--gold-deep); transform: rotate(-45deg); }
+.support__list strong { color: var(--gold-deep); }
+
+/* ---------- Sec.11 流れ ---------- */
+.flow .sec__eyebrow, .flow .sec__title { text-align: center; }
+.flow__steps { display: grid; gap: 10px; margin: 32px 0 20px; }
+.flow__steps li { background: var(--white); border: 1px solid #e8e0d2; padding: 14px 16px 14px 56px; position: relative; font-size: 15.5px; font-weight: 500; }
+.flow__steps span { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background: var(--dark); color: var(--gold); font-family: var(--serif); font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.flow__steps small { display: block; font-size: 12px; color: var(--ink-weak); font-weight: 400; }
+.flow__note { font-size: 13px; color: #5b5346; line-height: 1.9; text-align: center; }
+
+/* ---------- Sec.12 FAQ ---------- */
+.faq .sec__eyebrow, .faq .sec__title { text-align: center; }
+.faq__item { background: var(--paper); border: 1px solid #e8e0d2; margin-bottom: 13px; }
+.faq__item summary { list-style: none; cursor: pointer; font-weight: 700; font-size: 16px; padding: 18px 48px 18px 20px; position: relative; line-height: 1.65; }
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::before { content: "Q."; color: var(--gold-deep); font-family: var(--serif); margin-right: 10px; }
+.faq__item summary::after { content: ""; position: absolute; right: 20px; top: 50%; width: 11px; height: 11px; margin-top: -8px; border-right: 2.5px solid var(--gold-deep); border-bottom: 2.5px solid var(--gold-deep); transform: rotate(45deg); transition: transform 0.25s ease; }
+.faq__item[open] summary::after { transform: rotate(225deg); margin-top: -2px; }
+.faq__item p { padding: 0 20px 20px; font-size: 15px; line-height: 1.95; color: #4c443a; }
+
+/* ---------- Sec.13 最終CTA ---------- */
+.closing { position: relative; color: #fff; padding: 100px 0; overflow: hidden; }
+.closing__bg { position: absolute; inset: 0; }
+.closing__bg img { width: 100%; height: 100%; object-fit: cover; }
+.closing__bg::after { content: ""; position: absolute; inset: 0; background: rgba(12,9,5,0.82); }
+.closing__inner { position: relative; z-index: 1; text-align: center; }
+.closing__title { font-family: var(--serif); font-size: 29px; font-weight: 600; line-height: 1.65; margin-bottom: 18px; }
+.closing__body { font-size: 16px; color: #ddd6c9; margin-bottom: 8px; }
+
+/* ---------- フッター ---------- */
+.footer { background: #0e0c08; color: #a29a8c; text-align: center; padding: 46px 0 128px; font-size: 13px; }
+.footer__brand { font-family: var(--serif); color: #e5ddcd; font-size: 16px; letter-spacing: 0.14em; margin-bottom: 14px; }
+.footer__company { line-height: 2; margin-bottom: 18px; }
+.footer__copy { font-size: 11.5px; color: #6d6557; }
+
+/* ---------- 追従CTAバー ---------- */
+.stickybar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: rgba(14,12,8,0.93); backdrop-filter: blur(8px);
+  padding: 11px 16px calc(11px + env(safe-area-inset-bottom));
+  transform: translateY(110%); transition: transform 0.35s ease;
+}
+.stickybar.is-shown { transform: none; }
+.stickybar__text { color: #ece5d6; font-size: 13.5px; white-space: nowrap; letter-spacing: 0.02em; }
+.stickybar__text em { font-style: normal; font-family: var(--serif); color: var(--gold); font-size: 1.55em; font-weight: 700; }
+.stickybar__btn { background: linear-gradient(135deg, #d8b06a, #b8894a); color: #1c170f; text-decoration: none; font-size: 15px; font-weight: 700; letter-spacing: 0.03em; padding: 13px 22px; border-radius: 999px; white-space: nowrap; box-shadow: 0 6px 18px rgba(184,137,74,0.4); }
+
+/* ==========================================================
+   タブレット・PC
+   ========================================================== */
+@media (min-width: 768px) {
+  body { font-size: 17.5px; }
+  .pc { display: inline; }
+  .sp { display: none; }
+  .sec { padding: 110px 0; }
+  .sec__title { font-size: 36px; }
+  .sec__body { font-size: 18px; }
+
+  .fv { align-items: center; }
+  .fv__inner { max-width: 1040px; padding: 120px 40px 80px; }
+  .fv__catch { font-size: 54px; }
+  .fv__lead { font-size: 19px; }
+  .fv .cta { text-align: left; max-width: 440px; }
+  .fv__zeros span { font-size: 15px; }
+
+  .problem__list { grid-template-columns: repeat(2, 1fr); }
+  .zeros { grid-template-columns: repeat(3, 1fr); }
+  .roles { grid-template-columns: 1fr 1fr; }
+  .product__gallery { grid-template-columns: repeat(4, 1fr); }
+  .terms__list { grid-template-columns: repeat(2, 1fr); }
+  .flow__steps { grid-template-columns: repeat(2, 1fr); }
+  .closing__title { font-size: 38px; }
+  .stickybar { justify-content: center; gap: 28px; }
+}
