@@ -116,12 +116,10 @@ ul, ol { list-style: none; }
 .problem { background: var(--dark) url("../img/texture-dark.jpg") center / cover no-repeat; background-blend-mode: soft-light; }
 .problem .sec__title { text-align: center; }
 .problem .sec__eyebrow { text-align: center; }
-.problem__list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 34px 0; }
-.problem__list li { border: 1px solid #4a3428; border-top: 3px solid #d95b45; background: rgba(32,27,20,0.9); padding: 22px 14px; text-align: center; }
-.problem__icon { display: block; width: 46px; height: 46px; margin: 0 auto 12px; color: #e0604d; }
-.problem__icon svg { width: 100%; height: 100%; }
-.problem__list h3 { font-family: var(--serif); font-size: 17.5px; font-weight: 600; color: #ffffff; margin-bottom: 6px; line-height: 1.5; }
-.problem__list p { font-size: 13px; color: #c9bfae; line-height: 1.7; }
+.problem__list { display: grid; gap: 12px; margin: 34px 0; }
+.problem__list li { border: 1px solid #4a3428; border-left: 4px solid #d95b45; background: rgba(32,27,20,0.9); padding: 18px 20px; }
+.problem__list h3 { font-family: var(--serif); font-size: 20px; font-weight: 600; color: #ffffff; margin-bottom: 4px; line-height: 1.5; }
+.problem__list p { font-size: 14px; color: #c9bfae; line-height: 1.75; }
 .problem__closing { text-align: center; font-family: var(--serif); font-size: 17px; line-height: 2; color: #e8e1d2; }
 
 /* ---------- Sec.3 答え ---------- */
@@ -129,11 +127,8 @@ ul, ol { list-style: none; }
 .zeros { display: grid; gap: 16px; margin-top: 36px; }
 .zeros__card { border: 1px solid #e8e0d2; background: var(--paper); text-align: center; padding: 30px 20px; }
 .zeros__card em { font-style: normal; font-family: var(--serif); font-size: 44px; font-weight: 700; color: var(--gold-deep); line-height: 1.2; display: block; }
-.zeros__card--fill { background: var(--dark); border-color: var(--dark); color: #f1ece3; }
-.zeros__card--fill em { color: var(--gold); }
 .zeros__card h3 { font-size: 17px; font-weight: 700; margin: 6px 0 4px; }
 .zeros__card p { font-size: 13.5px; color: var(--ink-weak); }
-.zeros__card--fill p { color: #b9b09e; }
 
 /* ---------- Sec.4 What is ---------- */
 .steps { display: grid; gap: 14px; margin: 34px 0; }
@@ -239,7 +234,21 @@ ul, ol { list-style: none; }
 .footer { background: #0e0c08; color: #a29a8c; text-align: center; padding: 46px 0 128px; font-size: 13px; }
 .footer__brand { font-family: var(--serif); color: #e5ddcd; font-size: 16px; letter-spacing: 0.14em; margin-bottom: 14px; }
 .footer__company { line-height: 2; margin-bottom: 18px; }
+.footer__links { display: flex; justify-content: center; gap: 20px; margin-bottom: 18px; flex-wrap: wrap; }
+.footer__links a { color: #c8c0b1; text-decoration: underline; text-underline-offset: 3px; }
 .footer__copy { font-size: 11.5px; color: #6d6557; }
+
+/* ---------- プライバシー/特商法 下層ページ ---------- */
+.legal-page { padding: 56px 0 80px; }
+.legal-page h1 { font-family: var(--serif); font-size: 24px; margin-bottom: 30px; border-left: 4px solid var(--gold); padding-left: 14px; line-height: 1.6; }
+.legal-page h2 { font-family: var(--serif); font-size: 18px; margin: 30px 0 10px; }
+.legal-page p, .legal-page li { font-size: 15px; line-height: 2; color: #3d362d; }
+.legal-page ul { padding-left: 1.2em; }
+.legal-page ul li { list-style: disc; }
+.legal-page table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 8px; }
+.legal-page th, .legal-page td { border: 1px solid #e3daca; padding: 12px 14px; text-align: left; vertical-align: top; }
+.legal-page th { background: var(--cream); font-weight: 500; white-space: nowrap; width: 34%; }
+.legal-page .backlink { display: inline-block; margin-top: 36px; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- 追従CTAバー ---------- */
 .stickybar {
@@ -272,7 +281,7 @@ ul, ol { list-style: none; }
   .fv .cta { text-align: left; max-width: 440px; }
   .fv__zeros span { font-size: 15px; }
 
-  .problem__list { grid-template-columns: repeat(4, 1fr); }
+  .problem__list { grid-template-columns: repeat(2, 1fr); }
   .zeros { grid-template-columns: repeat(3, 1fr); }
   .roles { grid-template-columns: repeat(3, 1fr); }
   .fv__zeros { grid-template-columns: repeat(3, 1fr); max-width: 640px; }
